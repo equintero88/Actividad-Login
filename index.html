@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SID · Actividad 3 — Emanuel Quintero</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="app-header">
+    <h1>SID · Actividad 3</h1>
+    <div class="byline">Emanuel Quintero</div>
+  </header>
+
+  <!-- AUTH SCREEN -->
+  <main id="auth-screen" class="screen">
+    <section class="card">
+      <nav class="tabs">
+        <button id="tab-login" class="active">Login</button>
+        <button id="tab-register">Registro</button>
+      </nav>
+
+      <form id="form-login" class="form visible">
+        <label>Usuario
+          <input name="username" required autocomplete="username" />
+        </label>
+        <label>Contraseña
+          <input name="password" type="password" required autocomplete="current-password" />
+        </label>
+        <button type="submit">Iniciar sesión</button>
+        <p class="hint">Usa tu usuario/contraseña registrados.</p>
+      </form>
+
+      <form id="form-register" class="form">
+        <label>Usuario
+          <input name="username" required />
+        </label>
+        <label>Contraseña
+          <input name="password" type="password" required />
+        </label>
+        <button type="submit">Crear cuenta</button>
+        <p class="hint">Crea un usuario nuevo en la API real.</p>
+      </form>
+
+      <div id="auth-msg" class="msg"></div>
+    </section>
+  </main>
+
+  <!-- APP SCREEN -->
+  <main id="app-screen" class="screen hidden">
+    <section class="card">
+      <header class="row space">
+        <h2>Aplicación</h2>
+        <div>
+          <span id="whoami"></span>
+          <button id="btn-logout" class="danger">Salir</button>
+        </div>
+      </header>
+
+      <p>Sesión iniciada. Carga tu perfil, actualiza tu score y revisa el ranking.</p>
+      <div id="app-msg" class="msg"></div>
+
+      <!-- PERFIL -->
+      <div class="block">
+        <h3>Perfil</h3>
+        <div class="row">
+          <button id="btn-load-profile">Cargar perfil</button>
+        </div>
+        <div id="profile-card" class="profile-card"></div>
+        <div id="profile-msg" class="msg"></div>
+      </div>
+
+      <!-- ACTUALIZAR SCORE -->
+      <div class="block">
+        <h3>Actualizar score</h3>
+        <form id="form-update" class="form visible">
+          <label>Nuevo score
+            <input name="score" type="number" min="0" step="1" required />
+          </label>
+          <button type="submit">Guardar</button>
+        </form>
+        <div id="update-msg" class="msg"></div>
+      </div>
+
+      <!-- RANKING -->
+      <div class="block">
+        <h3>Ranking</h3>
+        <div class="row">
+          <button id="btn-load-ranking">Cargar ranking</button>
+          <label style="margin-left:auto">Límite
+            <input id="limit" type="number" min="1" value="50" />
+          </label>
+        </div>
+        <table id="table-ranking">
+          <thead><tr><th>#</th><th>Usuario</th><th>Score</th></tr></thead>
+          <tbody></tbody>
+        </table>
+        <div id="ranking-msg" class="msg"></div>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="./app.js"></script>
+</body>
+</html>

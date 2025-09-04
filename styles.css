@@ -1,0 +1,39 @@
+*{box-sizing:border-box;font-family:system-ui,Segoe UI,Roboto,Arial,sans-serif}
+body{margin:0;background:#0f172a;color:#e2e8f0}
+.app-header{padding:16px 20px;border-bottom:1px solid #1f2937;background:#111827}
+.app-header h1{margin:0;font-size:20px}
+.byline{opacity:.7;font-size:12px}
+.screen{display:flex;justify-content:center;padding:24px}
+.hidden{display:none}
+.card{width:100%;max-width:720px;background:#111827;border:1px solid #334155;border-radius:14px;padding:20px}
+.form{display:none;gap:12px;flex-direction:column;margin-top:12px}
+.form.visible{display:flex}
+label{display:flex;flex-direction:column;font-size:14px;gap:6px}
+input{padding:10px;border-radius:10px;border:1px solid #334155;background:#0b1220;color:#e2e8f0}
+button{padding:10px 14px;border:1px solid #334155;background:#0b1220;color:#e2e8f0;border-radius:10px;cursor:pointer}
+button:hover{background:#0f172a}
+button.danger{border-color:#7f1d1d}
+.tabs{display:flex;gap:8px}
+.tabs button{flex:1}
+.tabs .active{background:#0f172a}
+.row.space{display:flex;justify-content:space-between;align-items:center}
+.msg{margin-top:12px;font-size:14px;min-height:20px}
+.msg.error{color:#fecaca}
+.msg.ok{color:#bbf7d0}
+
+.block{margin-top:18px;padding-top:8px;border-top:1px solid #334155}
+
+/* Ranking */
+#table-ranking{width:100%;border-collapse:collapse;margin-top:10px}
+#table-ranking th,#table-ranking td{border:1px solid #334155;padding:8px;text-align:left}
+#table-ranking thead{background:#0b1220}
+
+/* Perfil */
+.profile-card{
+  margin-top:12px;border:1px solid #334155;border-radius:14px;
+  padding:14px 16px;background:#0b1220;display:flex;
+  align-items:center;justify-content:space-between;gap:12px;
+}
+.profile-name{font-size:18px;font-weight:600}
+.profile-score{font-size:14px;border:1px solid #334155;padding:6px 10px;border-radius:999px;background:#111827}
+.profile-score b{font-size:16px}
